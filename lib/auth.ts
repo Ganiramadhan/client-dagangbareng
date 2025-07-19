@@ -11,7 +11,6 @@ export const authOptions: NextAuthOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        // Validate credentials input
         const parsed = loginSchema.safeParse(credentials);
         if (!parsed.success) return null;
 
